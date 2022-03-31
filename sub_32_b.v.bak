@@ -1,0 +1,6 @@
+module sub_32_b(input wire[31:0] a, input wire [31:0] b, input wire in, output wire[31:0] sum, output wire out);
+	wire[31:0] Temp1;
+	neg_32_b neg(.a(b), .Z(Temp1));
+	add_32_bit add(.a(a), .b(Temp1), .in(in), .sum(sum), .cout(cout));
+	
+endmodule

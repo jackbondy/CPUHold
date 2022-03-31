@@ -1,0 +1,15 @@
+module inc_pc(
+	input clk, IncPc, e,
+	input [31:0] in,
+	output reg[31:0] out
+);
+
+always @ (posedge clk)
+begin	
+	if(IncPC == 1 && enable == 1)
+		out <= out + 1;
+	else if (enable == 1)
+		out <= in;
+		
+end
+endmodule
